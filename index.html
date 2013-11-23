@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Server Error</title>
+	<style>
+		/* normalize.css v2.1.3 | MIT License | git.io/normalize */
+		article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:\201C \201D \2018 \2019}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],/* 1 */
+		input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}body,figure{margin:0}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+		
+		
+		
+		/* lahdekorpi/error v1 | MIT License */
+		* { box-sizing: border-box; -webkit-box-sizing: border-box; }
+		html, body { background: #505865; color: white; }
+		html { font-family: Roboto, 'Helvetica Neue', Helvetica, sans-serif; }
+		body > div { padding: 20px 200px; padding: 20px 20vw; }
+		
+		div.message h1 { font-size: 50px; font-weight: 100; margin-bottom: 0; }
+		
+		div.message h2 { color: #AC4E43; font-weight: 300; margin-top: -7px; font-size: 27px; }
+		
+		div.message { background: #E86A5B; }
+		div.illustration { background: #D46054; height: 250px; text-align: center; padding-top: 45px;}
+		
+		div.illustration > * { display: block; width: 20%; float: left; }
+		div.illustration > i { font-size: 50px; margin-top: 50px; color: #EBA69F; }
+		div.illustration > i.fa-exclamation-circle { color: #B14A40; cursor: help; }
+		div.illustration > section i { font-size: 128px; }
+		div.illustration h3 { font-size: 25px; font-weight: 100; margin-top: 0; }
+		div.illustration section.error { opacity: 0.5; }
+		
+		div.info { background: #59616E; min-height: 100px; clear: both; }
+		
+		div.info > section { float: left; width: 50%; padding-right: 20px; }
+		div.info > section h2 { font-weight: 300; margin-bottom: 0; }
+		div.info > section h3 { color: #9199A3; margin-top: 0; font-weight: 300; }
+		
+		div.info:after { content: "\a0"; clear: both; }
+		
+		footer { clear: both; text-align: center; color: #41464B; margin: 20px; }
+	</style>
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<link href="//fonts.googleapis.com/css?family=Roboto:400,100,300" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="message">
+	<h1>Server Error</h1>
+	<h2>Connection failed</h2>
+</div>
+
+<div class="illustration">
+
+	<section>
+		<i class="fa fa-user"></i>
+		<h3 class="ok">You</h3>
+	</section>
+
+	<i class="via fa fa-arrows-h"></i>
+
+	<!-- This is CDN by default, but one option would be You <-> Our Server ! PHP / Rails / MySQL / MongoDB / Whatever. Replace accordingly -->
+	<section>
+		<i class="fa fa-cloud"></i>
+		<h3 class="ok">Our <abbr title="Content Delivery Network">CDN</abbr></h3>
+	</section>
+
+	<i class="via fa fa-exclamation-circle" title="The problem might be here"></i>
+
+	<section class="error">
+		<i class="fa fa-hdd-o"></i>
+		<!-- This gets replaced by the host with JavaScript -->
+		<h3 id="host" class="error">Website / Webapp</h3>
+	</section>
+
+</div>
+
+<div class="info">
+
+	<!-- Explain here (in a way that non-tech-savvy people understand) what happend and why. And make sure not to scare people as there isn't anything wrong with their end -->
+	<section>
+		<h2>What &amp; Why?</h2>
+		<h3>Oh no, did I break it?</h2>
+		<p>Most likely this isn't your nor your devices fault.</p>
+		<p>There was some problem between the connections of our servers or the server is down.<br>
+		the server might be down for maintenance or due to excessive load.</p>
+	</section>
+
+	<!-- You probably already have some kind of monitoring installed and got this error elsewhere, so if you want to get flooded by people reporting problems, here's the place for contact info -->
+	<section>
+		<h2>What now?</h2>
+		<h3>What is the suggested amount of panic for this situation?</h3>
+		<p>Just sit back and relax. Get some refreshing tea and meditate.<br>
+		Our highly trained team of penguins is already swimming to the datacenter to fix things.</p>
+		<p>Try again in a couple of minutes.</p>
+	</section>
+
+</div>
+
+<!-- Add something nice here. Or remove it (clearing of the sections above is done with CSS pseudo elements) -->
+<footer>
+	Lygon Software. Designed by Toni Lähdekorpi.
+</footer>
+
+<!-- This replaces the "Website / Webapp" text with host -->
+<script>
+	if(typeof(window.location.host)!='undefined' && !window.location.host.isCollapsed)
+		document.getElementById("host").innerHTML=window.location.host;
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# For Varnish 3.x
+
+sub vcl_deliver {
+        unset resp.http.error50x;
+}
+
+sub vcl_error {
+        if ( obj.status >= 500 && obj.status <= 505) {
+                set obj.http.Content-Type = "text/html; charset=utf-8";
+                set obj.http.error50x = std.fileread("/opt/www/error.html"); # Point to your html file
+                synthetic obj.http.error50x;
+                return(deliver);
+        }
+}
