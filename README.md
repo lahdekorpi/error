@@ -16,3 +16,5 @@ TODO:
 - Embed Roboto from Google Fonts
 - Embed used icons from Font Awesome
 - More sample configs
+
+*This design is inspired by an error page by a certain supercharging, flaring cloud CDN service. A big thanks to them.*
